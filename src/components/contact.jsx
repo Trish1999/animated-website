@@ -1,10 +1,16 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Lottie from 'lottie-react';
-import robo from '../assets/robo.json';
 
 const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [animationData, setAnimationData] = useState(null);
+  
+    useEffect(() => {
+      fetch('/robo.json')
+        .then(res => res.json())
+        .then(data => setAnimationData(data));
+    }, []);
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -47,7 +53,7 @@ const Contact = () => {
       </form>
           <div className="flex md:flex-row flex-col justify-end">
       <Lottie
-        animationData={robo}
+        animationData={animationData}
         loop
         autoplay
         className="w-200 h-100 object-contain opacity-100"
