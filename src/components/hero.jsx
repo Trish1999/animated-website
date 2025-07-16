@@ -1,18 +1,9 @@
-import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import Lottie from 'lottie-react';
+import heroBg from '../../public/heroBg.json';
 import ScrollToSection from '../components/scrollTosection';
 
 export default function Hero() {
-  const [animationData, setAnimationData] = useState(null);
-
-  useEffect(() => {
-    fetch('/heroBg.json')
-      .then(res => res.json())
-      .then(data => setAnimationData(data));
-  }, []);
-
-  if (!animationData) return null; 
   return (
     <section
       id="hero"
@@ -37,14 +28,14 @@ export default function Hero() {
         </motion.button>
       </div>
 
-      <div className="md:w-1/3 flex justify-center mt-2 md:mt-5">
+      {/* <div className="md:w-1/3 flex justify-center mt-2 md:mt-5">
         <Lottie
-          animationData={animationData}
+          animationData={heroBg}
           loop
           autoplay
           className="w-80 h-80 md:w-200 md:h-200 object-contain opacity-100"
         />
-      </div>
+      </div> */}
     </section>
   );
 }

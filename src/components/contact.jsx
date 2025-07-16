@@ -1,16 +1,10 @@
-import React, { useState ,useEffect } from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Lottie from 'lottie-react';
+import robo from '../../public/robo.json';
 
 const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
-  const [animationData, setAnimationData] = useState(null);
-  
-    useEffect(() => {
-      fetch('/robo.json')
-        .then(res => res.json())
-        .then(data => setAnimationData(data));
-    }, []);
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -51,14 +45,14 @@ const Contact = () => {
           Send Message
         </motion.button>
       </form>
-          <div className="flex md:flex-row flex-col justify-end">
+          {/* <div className="flex md:flex-row flex-col justify-end">
       <Lottie
-        animationData={animationData}
+        animationData={robo}
         loop
         autoplay
         className="w-200 h-100 object-contain opacity-100"
       />
-    </div>
+    </div> */}
     </section>
   );
 };
