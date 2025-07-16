@@ -1,9 +1,11 @@
 import { motion } from 'framer-motion';
 import Lottie from 'lottie-react';
-import heroBg from '../assets/heroBg.json';
+import rawHeroBg from '../assets/heroBg.json';
 import ScrollToSection from '../components/scrollTosection';
 
 export default function Hero() {
+  
+const heroBg = JSON.parse(JSON.stringify(rawHeroBg));
   return (
     <section
       id="hero"
@@ -22,7 +24,7 @@ export default function Hero() {
         <motion.button
           whileHover={{ scale: 1.1 }}
           className="bg-gray-800 rounded-lg px-6 py-4 text-lg"
-          onClick={() => ScrollToSection('about')}
+          onClick={() => ScrollToSection('contact')}
         >
           Discover More
         </motion.button>
