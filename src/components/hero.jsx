@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import Lottie from 'lottie-react';
-import heroBg from '../assets/Main Scene.json';
+import heroBg from '../assets/heroBg.json';
 import ScrollToSection from '../components/scrollTosection';
 
 export default function Hero() {
@@ -28,7 +28,6 @@ export default function Hero() {
         </motion.button>
       </div>
 
-      {/* Lottie Animation Section */}
       <div className="md:w-1/3 flex justify-center mt-2 md:mt-5">
         <Lottie
           animationData={heroBg}
