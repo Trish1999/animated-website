@@ -20,7 +20,7 @@ const Model = () => {
             key={step}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.7 }}
+            transition={{ delay: index * 0.5 }}
             className="bg-white shadow-lg rounded-lg p-6 w-60 text-center"
           >
             <div className="text-2xl text-black font-bold">{step}</div>

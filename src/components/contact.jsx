@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import Lottie from 'lottie-react';
-import robo from '../../public/robo.json';
 
 const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -16,9 +14,9 @@ const Contact = () => {
   };
 
   return (
-    <section className="flex flex-row py-20 px-6 bg-white" id="contact">
-      <h2 className="text-4xl font-bold text-center mb-8">Contact Us</h2>
-      <form onSubmit={handleSubmit} className="max-w-xl mx-auto space-y-6">
+    <section className="flex flex-col item-center py-20 px-6 bg-white" id="contact">
+      <h2 className="text-4xl font-bold text-center text-black mb-8">Contact Us</h2>
+      <form onSubmit={handleSubmit} className=" mx-auto space-y-6">
         {["name", "email", "message"].map((field) => (
           <motion.div
             key={field}
@@ -45,14 +43,6 @@ const Contact = () => {
           Send Message
         </motion.button>
       </form>
-          {/* <div className="flex md:flex-row flex-col justify-end">
-      <Lottie
-        animationData={robo}
-        loop
-        autoplay
-        className="w-200 h-100 object-contain opacity-100"
-      />
-    </div> */}
     </section>
   );
 };

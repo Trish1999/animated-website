@@ -18,7 +18,7 @@ function App() {
   }, []);
 
   return (
-<div className="w-full font-sans bg-gradient-to-br from-black via-gray-900 to-black text-white">
+<div className=" font-sans bg-gradient-to-br from-black via-gray-900 to-black text-white">
       <Hero />
       <About />
       <Model />
