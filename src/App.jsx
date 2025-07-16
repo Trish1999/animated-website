@@ -6,6 +6,7 @@ import Model from "./components/model";
 import Stack from "./components/stack";
 import Contact from "./components/contact";
 import Lenis from "@studio-freight/lenis";
+import Navbar from "./components/navbar";
 
 function App() {
   useEffect(() => {
@@ -19,6 +20,7 @@ function App() {
 
   return (
 <div className=" font-sans bg-gradient-to-br from-black via-gray-900 to-black text-white">
+      <Navbar />
       <Hero />
       <About />
       <Model />

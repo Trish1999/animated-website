@@ -5,6 +5,7 @@ import ThreeParticleBackground from './background';
 export default function Hero() {
   return (
     <>
+    <image src="/logo.png"></image>
      <div className="h-150 flex flex-col items-center justify-center text-center md:text-left space-y-6 flex-1 pt-30 ">
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
