@@ -1,11 +1,9 @@
 import { motion } from 'framer-motion';
 import Lottie from 'lottie-react';
-import rawHeroBg from '../assets/heroBg.json';
+import heroBg from '../assets/heroBg.json';
 import ScrollToSection from '../components/scrollTosection';
 
 export default function Hero() {
-  
-const heroBg = JSON.parse(JSON.stringify(rawHeroBg));
   return (
     <section
       id="hero"
